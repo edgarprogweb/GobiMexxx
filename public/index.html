@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gobirmexxx</title>
+    <!-- BOOSTRAP CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootswatch@4.5.2/dist/journal/bootstrap.min.css"
+        integrity="undefined" crossorigin="anonymous">
+    <link rel="stylesheet" href="styles.css"
+        integrity="undefined" crossorigin="anonymous">
+</head>
+
+<body>
+
+    <input type="checkbox" id="nav-toggle">
+    <div class="sidebar">
+        <div class="sidebar-brand">
+            <h2><a href="images/resultados.jpg"><span class="delegaciones" style="color:#f1f1f1"></span> <span>Delegaciones</span></a></h2>
+        </div>
+        <!--Secciones-del-tablero-->
+        <div class="sidebar-menu">
+            <ul>
+                
+                <li>
+                    <a href="images/pri.jpg"><span class="las la-stethoscope"></span>
+                    <span>Cuajimalpa </span></a>
+                </li>
+                <li>
+                    <a href="images/pan.png"><span class="las la-user"></span>
+                    <span>Xochimilco</span></a>
+                </li>
+                <li>
+                    <a href="images/Morena.png"><span class="las la-user-injured"></span>
+                    <span>Gustavo A Madero</span></a>
+                </li>
+                <li>
+                    <a href="images/pri.jpg"><span class="las la-history"></span>
+                    <span>Miguel Hidalgo</span></a>
+                </li>
+
+                <li>
+                    <a href="images/pri.jpg"><span class="las la-history"></span>
+                    <span>Aztcapozalco</span></a>
+                </li>
+                <li>
+                    <a href="images/Morena.png"><span class="las la-history"></span>
+                    <span>Venustiano Carranza</span></a>
+                </li>
+                <li>
+                    <a href="images/Morena.png"><span class="las la-history"></span>
+                    <span>Iztacalco</span></a>
+                </li>
+                <li>
+                    <a href="images/Morena.png"><span class="las la-history"></span>
+                    <span>Iztapalacra</span></a>
+                </li>
+                <li>
+                    <a href="images/Morena.png"><span class="las la-history"></span>
+                    <span>Milpa Alta</span></a>
+                </li>
+                <li>
+                    <a href="images/pri.jpg"><span class="las la-history"></span>
+                    <span>Coyoacan</span></a>
+                </li>
+                <li>
+                    <a href="images/pan.png"><span class="las la-history"></span>
+                    <span>Benito Juarez</span></a>
+                </li>
+                <li>
+                    <a href="images/Morena.png"><span class="las la-history"></span>
+                    <span>Tlahuac</span></a>
+                </li>
+                <li>
+                    <a href="images/pri.jpg"><span class="las la-history"></span>
+                    <span>Magdalena Contreras</span></a>
+                </li>
+                <li>
+                    <a href="images/pri.jpg"><span class="las la-history"></span>
+                    <span>Cuahtemoc</span></a>
+                </li>
+                <li>
+                    <a href="images/pri.jpg"><span class="las la-history"></span>
+                    <span>Alvaro Obregon</span></a>
+                </li>
+
+                
+            </ul>
+        </div>
+    </div>
+
+    
+    <nav class="navbar  navbar-expand-lg navbar-dark bg-dark border-bottom">
+        <div class="container" >
+
+            <a class="navbar-brand" href="#">Gobirmexxx</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item logged-out" style="display: block;">
+                        <a class="nav-link" href="#" data-toggle="modal" data-target="#signinModal">Ingresar</a>
+                    </li>
+                    <li class="nav-item logged-out" style="display: block;">
+                        <a class="nav-link" href="#" data-toggle="modal" data-target="#signupModal">Registro</a>
+                    </li>
+                    <li class="nav-item logged-in" style="display: block;">
+                        <a class="nav-link" href="#" id="logout">Cerra sesion</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+
+            <!-- Add new post -->
+            <div class="col-sm-4" style="top: 45px;">
+                <form id="new-post" style="display: block;">
+                    <div class="form-group">
+                        <input type="text" name="title" id="title" placeholder="Title" class="form-control" autofocus>
+                    </div>
+                    <div class="form-group">
+                        <textarea class="form-control" name="desc" id="desc" rows="3"></textarea>
+                    </div>
+                    <div class="form-group">
+                        <input type="file" name="file-img" id="file-img" placeholder="Title" class="form-control" autofocus>
+                    </div>
+                    <button class="btn btn-success btn-block" id="btn-new-post">
+                        Agregar nueva publicacion
+                    </button>
+                </form>
+            </div>
+
+            <!-- See posts -->
+            <div class="col-sm-8" >
+                <ul class="list-group posts"center>
+
+                </ul>
+            </div>
+
+
+        </div>
+    </div>
+
+    <!-- Modal -->
+    <div class="modal fade" id="signinModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalSignin"
+        aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h3>Ingresar</h3>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form id="login-form">
+                        <div class="form-group">
+                            <input type="text" id="login-email" class="form-control" placeholder="Title" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="password" id="login-password" class="form-control" placeholder="Password"
+                                required>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Ingresar</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="signupModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h3>Registro</h3>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form id="signup-form">
+                        <div class="form-group">
+                            <input type="text" id="signup-email" class="form-control" placeholder="Title" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="password" id="signup-password" class="form-control" placeholder="Password"
+                                required>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Guardar Cambios</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    
+
+    <!-- SCRIPTS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+        integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+        crossorigin="anonymous"></script>
+
+    <!-- SDK FIREBASE -->
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/8.6.7/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.7/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.7/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.7/firebase-storage.js"></script>
+
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+
+    <script>
+        // Your web app's Firebase configuration
+        var firebaseConfig = {
+            apiKey: "AIzaSyD1zzcCnQbyKfcvOkKPvBAgBW79cm2Cy3E",
+            authDomain: "edgarprogwebb-387e8.firebaseapp.com",
+            projectId: "edgarprogwebb-387e8",
+            storageBucket: "gs://edgarprogwebb-387e8.appspot.com",
+            messagingSenderId: "106653264891",
+            appId: "1:106653264891:web:a55446f36271101fd7395e"
+        };
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+        const auth = firebase.auth();
+        const fs = firebase.firestore();
+        var storage = firebase.storage();
+        var storageRef = storage.ref();
+    </script>
+
+
+<footer  style="width:100%; margin-left: 0px;"  >
+    <div class="copyright" style="background-color: #000000;">
+        <div class="container-fluid" style="background-color: #030303; color: #f1f1f1; height: 60px; ">
+            ©  Copyright: Todos los derechos reservados-Mendez Villa Edgar
+    
+        </div>
+    </div>
+
+
+    
+    <script src="/main.js"></script>
+</body>
+
+</html>
